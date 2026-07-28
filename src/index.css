@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(79, 70, 229, 0.15),
+      transparent 40%
+    ),
+    #f8fafc;
+
+  color: #020617;
+}
+
+.dark body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(79, 70, 229, 0.15),
+      transparent 40%
+    ),
+    #020617;
+
+  color: #f8fafc;
+}
